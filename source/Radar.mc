@@ -8,14 +8,15 @@ import Toybox.Lang;
 
 class Radar {
 
-    private static const RADAR_WIDTH = 40;
-    private static const RADAR_WAVE_COLOR = Graphics.COLOR_GREEN;
+    private static const RADAR_WIDTH = 100;
+    private static const RADAR_GRID_LINES = 10;
+    private static const RADAR_GRID_COLOR = 0x005500;
     private static const RADAR_BEAM_COLOR = Graphics.COLOR_DK_GREEN;
-    private static const RADAR_WAVES = 20;
 
     private var _time as Gregorian.Info;
 
-    private var _radarWaveColor = RADAR_WAVE_COLOR;
+    private var _radarGridLines = RADAR_GRID_LINES;
+    private var _radarGridColor = RADAR_GRID_COLOR;
     private var _radarBeamColor = RADAR_BEAM_COLOR;
 
 
@@ -41,22 +42,34 @@ class Radar {
     }
 
     function draw(dc as Graphics.Dc) as Radar {
-        
+
         var seconds = _time.sec;
         var angle = 90 - ((seconds / 60.0) * 360).toNumber();
-        var startAngle = angle + RADAR_WIDTH / 2;
-        var endAngle = angle - RADAR_WIDTH / 2;
+        var startAngle = angle + RADAR_WIDTH;
+        var endAngle = angle - RADAR_WIDTH;
 
         dc.setPenWidth(_radius);
-        dc.setColor(_radarBeamColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawArc(_centerX, _centerY, _radius / 2, Graphics.ARC_CLOCKWISE, startAngle, endAngle);
+        // dc.setColor(_radarBeamColor, Graphics.COLOR_TRANSPARENT);
+        // dc.drawArc(_centerX, _centerY, _radius / 2, Graphics.ARC_CLOCKWISE, startAngle, endAngle);
+        var color = 0x00FF00;
+        var steps = 40;
+        var width = RADAR_WIDTH / steps;
+        for (var i = 0; i < steps; ++i) {
+            dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+            dc.drawArc(_centerX, _centerY, _radius / 2, Graphics.ARC_CLOCKWISE, angle + width, angle);
+            // color -= 0x001100;
+            color = ((0xFF * (steps - (i + 1))) / steps) << 8;
+            angle += width;
+        }
 
         dc.setPenWidth(1);
-        dc.setColor(_radarWaveColor, Graphics.COLOR_TRANSPARENT);
-        for (var i = 0; i < RADAR_WAVES; ++i) {
-            var radius = (i + 1) * _radius / RADAR_WAVES;
-            dc.drawArc(_centerX, _centerY, radius, Graphics.ARC_CLOCKWISE, startAngle, endAngle);
+        dc.setColor(_radarGridColor, Graphics.COLOR_TRANSPARENT);
+        for (var i = 0; i < _radarGridLines; ++i) {
+            var radius = (i + 1) * _radius / _radarGridLines;
+            dc.drawArc(_centerX, _centerY, radius, Graphics.ARC_CLOCKWISE, 0, 0);
         }
+
+
 
         return self;
     }
