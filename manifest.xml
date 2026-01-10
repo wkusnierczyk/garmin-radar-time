@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <iq:manifest version="3" xmlns:iq="http://www.garmin.com/xml/connectiq">
-    <iq:application id="" type="watchface" name="@Strings.AppName" entry="{blank:ucname}TimeApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="1.2.0">
+    <iq:application id="aee72c3b-f586-4a0b-87b3-e5e5c7926ebe" type="watchface" name="@Strings.AppName" entry="RadarApp" version="0.1.0" launcherIcon="@Drawables.LauncherIcon" minApiLevel="1.2.0">
         <iq:products>
             <iq:product id="descentg1"/>
             <iq:product id="descentg2"/>
