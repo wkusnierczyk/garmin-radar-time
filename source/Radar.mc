@@ -41,6 +41,7 @@ class Radar {
     }
 
     function draw(dc as Graphics.Dc) as Radar {
+        
         var seconds = _time.sec;
         var angle = 90 - ((seconds / 60.0) * 360).toNumber();
         var startAngle = angle + RADAR_WIDTH / 2;
