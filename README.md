@@ -1,62 +1,45 @@
-# Garmin {blank:ucname} Time
+# Garmin Radar Time
 
-A minimalist, elegant, nerdy, typography-focused Garmin Connect IQ watch face that displays the current time {blank:short-description}.
+A minimalist, elegant, nerdy Garmin Connect IQ watch face that displays the current time as a radar chart, with hour and minute hands as ships lighting up in a radar beam.
 
-![{blank:ucname} Time](resources/graphics/{blank:ucname}TimeHero-small.png)
+![Radar Time](resources/graphics/RadarTimeHero-small.png)
 
 Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/{blank:app-id}) or through the Connect IQ mobile app.
 
 > **Note**  
-> {blank:ucname} Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
+> Radar Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
 > It is shared _as is_ as an open source project, with no commitment to long term maintenance and further feature development.
 >
-> Please use [issues](https://github.com/wkusnierczyk/garmin-{blank:lcname}-time/issues) to provide bug reports or feature requests.  
-> Please use [discussions](https://github.com/wkusnierczyk/garmin-{blank:lcname}-time/discussions) for any other comments.
+> Please use [issues](https://github.com/wkusnierczyk/garmin-radar-time/issues) to provide bug reports or feature requests.  
+> Please use [discussions](https://github.com/wkusnierczyk/garmin-radar-time/discussions) for any other comments.
 >
 > All feedback is wholeheartedly welcome.
 
 ## Contents
 
-* [{blank:ucname} time](#{blank:lcname}-time)
+* [Radar time](#radar-time)
 * [Features](#features)
 * [Fonts](#fonts)
 * [Build, test, deploy](#build-test-deploy)
 
-## {blank:ucname} time
+## Radar time
 
-{blank:description}
+Radar Time shows the current time with hour and minute hands representted as 'ships', and the second hand represented as a radar beam, lighting up the ships when they come into the radar beam.
+
 
 ## Features
 
-The {blank:ucname} Time watch face supports the following features:
+The Radar Time watch face supports the following features:
 
 |Screenshot|Description|
 |-|:-|
-{blank:features}
+|![](resources/graphics/RadarTime3_resized.png)|**Radar screen**<br/> Hour and minutes displayed as dim ships, seconds as a rotating radar beam.|
+|![](resources/graphics/RadarTime4_resized.png)|**Lighted ships**<br/> When within the radar beam, ships light up in a bright color.|
+|![](resources/graphics/RadarTime1_resized.png)|**Color themes**<br/> Ship, radar beam and grid colors can be changed in a customisation menu setting.</br/>_Not available in the current version_.|
 
 ## Fonts
 
-The {blank:ucname} Time watch face uses custom fonts:
-
-{blank:fonts}
-
-> The development of Garmin watch faces motivated the implementation of two useful tools:
-> * A TTF to FNT+PNG converter ([`ttf2bmp`](https://github.com/wkusnierczyk/ttf2bmp)).  
-> Garmin watches use non-scalable fixed-size bitmap fonts, and cannot handle variable size True Type fonts directly.
-> * An font scaler automation tool ([`garmin-font-scaler`](https://github.com/wkusnierczyk/garmin-font-scaler)).  
-> Garmin watches come in a variety of shapes and resolutions, and bitmap fonts need to be scaled for each device proportionally to its resolution.
-
-The font development proceeded as follows:
-
-* The fonts were downloaded from [Google Fonts](https://fonts.google.com/) as True Type  (`.ttf`) fonts.
-* The fonts were converted to bitmaps as `.fnt` and `.png` pairs using the open source command-line [`ttf2bmp`](https://github.com/wkusnierczyk/ttf2bmp) converter.
-* The font sizes were established to match the Garmin Fenix 7X Solar watch 280x280 pixel screen resolution.
-* The fonts were then scaled proportionally to match other screen sizes available on Garmin watches using the [`garmin-font-scaler`](https://github.com/wkusnierczyk/garmin-font-scaler) tool.
-
-
-The table below lists all font sizes provided for the supported screen resolutions.
-
-{blank:font-table}
+The Radar Time watch face does not use any fonts.
 
 ## Build, test, deploy
 

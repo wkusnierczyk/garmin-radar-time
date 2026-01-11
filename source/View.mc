@@ -9,6 +9,8 @@ import Toybox.Lang;
 
 class View extends WatchUi.WatchFace {
 
+    private var _radar = new Radar();
+
     function initialize() {
         WatchFace.initialize();
     }
@@ -22,19 +24,10 @@ class View extends WatchUi.WatchFace {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_WHITE);
         dc.fillRectangle(0, 0, dc.getWidth(), dc.getHeight());
 
-        // var info = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-        // var hour = info.hour;
-        // var minutes = info.min;
-        // var seconds = info.sec;
-        // var dayOfWeek = info.day_of_week;
-        // var day = info.day;
-        // var month = info.month;
-        // var year = info.year;
-
-        // var clockTime = System.getClockTime();
-        // var hour = clockTime.hour;
-        // var minutes = clockTime.min;
-        // var seconds = clockTime.sec;
+        var time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        _radar
+            .forTime(time)
+            .draw(dc);
 
     }
 

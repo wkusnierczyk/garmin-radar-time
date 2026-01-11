@@ -2,7 +2,7 @@ using Toybox.Application;
 using Toybox.WatchUi;
 
 
-class App extends Application.AppBase {
+class RadarApp extends Application.AppBase {
 
     function initialize() {
         AppBase.initialize();

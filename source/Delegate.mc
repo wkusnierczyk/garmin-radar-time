@@ -12,7 +12,7 @@ class Delegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item) {
 
-        var id = item.getId();
+        // var id = item.getId();
         
         // if (id.equals(STANDARD_TIME_PROPERTY) && item instanceof WatchUi.ToggleMenuItem) {
         //     Properties.setValue(STANDARD_TIME_PROPERTY, item.isEnabled());
