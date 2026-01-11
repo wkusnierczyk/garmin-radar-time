@@ -13,8 +13,6 @@ class Radar {
         RADAR_WIDTH = 100,
         RADAR_GRID_LINES = 10,
         RADAR_BEAM_SHADES = 40,
-        // RADAR_GRID_COLOR = 0x005500,
-        // RADAR_BEAM_COLOR = 0x009900;
         RADAR_GRID_COLOR = 0x550000,
         RADAR_BEAM_COLOR = 0x990000;
 
@@ -28,8 +26,6 @@ class Radar {
 
     private static const
         SHIP_DIM_COLOR = Graphics.COLOR_DK_GRAY,
-        // HOURS_SHIP_LIT_COLOR = 0x00FF00,
-        // MINUTES_SHIP_LIT_COLOR = 0x00DD00;
         HOURS_SHIP_LIT_COLOR = 0xFF0000,
         MINUTES_SHIP_LIT_COLOR = 0xDD0000;
 
