@@ -6,9 +6,9 @@ import Toybox.Lang;
 
 class Menu extends WatchUi.Menu2 {
 
-    function initialize() {
+    // function initialize() {
 
-        Menu2.initialize({:title => CUSTOMIZE_MENU_TITLE});
+        // Menu2.initialize({:title => CUSTOMIZE_MENU_TITLE});
 
         // var standardTimeEnabled = PropertyUtils.getPropertyElseDefault(STANDARD_TIME_PROPERTY, STANDARD_TIME_MODE_DEFAULT);
         // addItem(new WatchUi.ToggleMenuItem(
@@ -28,6 +28,6 @@ class Menu extends WatchUi.Menu2 {
         //     null
         // ));
 
-    }
+    // }
 
 }

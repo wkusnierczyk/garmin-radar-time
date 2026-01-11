@@ -4,14 +4,9 @@ using Toybox.Graphics;
 import Toybox.Lang;
 
 
-// Colors
-const HOUR_COLOR = Graphics.COLOR_WHITE;
-const MINUTES_COLOR = Graphics.COLOR_LT_GRAY;
-const SECONDS_COLOR = Graphics.COLOR_DK_GRAY;
-
 
 // Settings
-const CUSTOMIZE_MENU_TITLE = Application.loadResource(Rez.Strings.Customize);
+// const CUSTOMIZE_MENU_TITLE = Application.loadResource(Rez.Strings.Customize);
 
 // const STANDARD_TIME_LABEL = Application.loadResource(Rez.Strings.StandardTimeMenuTitle);
 // const STANDARD_TIME_PROPERTY = "ShowStandardTime";

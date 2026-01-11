@@ -1,1 +1,5 @@
 resources/drawables/launcher_icon.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/RadarTime4.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/RadarTime1.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/RadarTime2.png filter=lfs diff=lfs merge=lfs -text
+resources/graphics/RadarTime3.png filter=lfs diff=lfs merge=lfs -text
