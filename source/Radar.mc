@@ -105,7 +105,7 @@ class Radar {
 
         _dc = dc;
         _drawBeam();
-        // _drawGrid();
+        _drawGrid();
         _drawTime();
 
         return self;
