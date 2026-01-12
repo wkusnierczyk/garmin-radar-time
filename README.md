@@ -36,6 +36,7 @@ The Radar Time watch face supports the following features:
 |![](resources/graphics/RadarTime3_resized.png)|**Radar screen**<br/> Hour and minutes displayed as dim ships, seconds as a rotating radar beam.|
 |![](resources/graphics/RadarTime4_resized.png)|**Lighted ships**<br/> When within the radar beam, ships light up in a bright color.|
 |![](resources/graphics/RadarTime1_resized.png)|**Color themes**<br/> Ship, radar beam and grid colors can be changed in a customisation menu setting.</br/>_Not available in the current version_.|
+|![](resources/graphics/RadarTime7_resized.png)|**MIP screens**<br/> MIP screens handle only 64 colors, which makes displaying a smooth radar beam a challenge. Instead, on MIP screens the beam is drawn by varying the number of waves depending on the angular distance from the leading beam edge.|
 
 ## Fonts
 
