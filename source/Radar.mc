@@ -15,6 +15,8 @@ class Radar {
         RADAR_BEAM_SHADES = 40,
         RADAR_GRID_COLOR = 0x550000,
         RADAR_BEAM_COLOR = 0x990000;
+        // RADAR_GRID_COLOR = 0x355E3B,
+        // RADAR_BEAM_COLOR = 0x4CBB17;
 
     private static const
         HOURS_SHIP_WIDTH_FACTOR = 0.05,
@@ -28,6 +30,8 @@ class Radar {
         SHIP_DIM_COLOR = Graphics.COLOR_DK_GRAY,
         HOURS_SHIP_LIT_COLOR = 0xFF0000,
         MINUTES_SHIP_LIT_COLOR = 0xDD0000;
+        // HOURS_SHIP_LIT_COLOR = Graphics.COLOR_GREEN,
+        // MINUTES_SHIP_LIT_COLOR = Graphics.COLOR_GREEN;
 
     private static const
         RED_SHIFT = 16,
@@ -101,7 +105,7 @@ class Radar {
 
         _dc = dc;
         _drawBeam();
-        _drawGrid();
+        // _drawGrid();
         _drawTime();
 
         return self;
@@ -110,6 +114,45 @@ class Radar {
 
 
     private function _drawBeam() as Radar {
+
+        if (SCREEN_IS_AMOLED) {
+            return _drawBeamColors();
+        } else if (SCREEN_IS_MIP) {
+            return _drawBeamLines();
+        }
+        return self; // can't happen
+
+    }
+
+    private function _drawBeamLines() as Radar {
+
+        var color = _radarBeamColor;
+        
+        var seconds = _time.sec,
+            angle = _correctAngle((seconds / 60.0) * 360);
+
+        // TODO move constants upfront
+        var steps = 15;
+        var waves = 5;
+        var factor = 1.2;
+        
+        _dc.setPenWidth(1);
+        _dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        for (var i = 0; i < steps; ++i) {
+            var width = (steps - i) * _radarWidth / steps;
+            for (var j = 0; j < waves.toNumber(); ++j) {
+                var radius = ((j + 1.0) * _radius / waves).toNumber();
+                _dc.drawArc(_centerX, _centerY, radius, Graphics.ARC_CLOCKWISE, angle + width, angle);
+            }
+            waves = waves * factor;
+        }  
+        
+        return self;
+
+    }
+
+
+    private function _drawBeamColors() as Radar {
 
         var color = _radarBeamColor;
 
