@@ -4,7 +4,7 @@ A minimalist, elegant, nerdy Garmin Connect IQ watch face that displays the curr
 
 ![Radar Time](resources/graphics/RadarTimeHero-small.png)
 
-Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/{blank:app-id}) or through the Connect IQ mobile app.
+Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps/b8ce1105-3cec-4b65-93a4-75e51ea4ac66) or through the Connect IQ mobile app.
 
 > **Note**  
 > Radar Time is part of a [collection of unconventional Garmin watch faces](https://github.com/wkusnierczyk/garmin-watch-faces). It has been developed for fun, as a proof of concept, and as a learning experience.
