@@ -18,12 +18,12 @@ class RadarApp extends Application.AppBase {
         return [ new View() ];
     }
 
-    function onSettingsChanged() as Void {
-        WatchUi.requestUpdate();
-    }
+    // function onSettingsChanged() as Void {
+    //     WatchUi.requestUpdate();
+    // }
 
-    function getSettingsView() {
-        return [ new Menu(), new Delegate() ];
-    }
+    // function getSettingsView() {
+    //     return [ new Menu(), new Delegate() ];
+    // }
 
 }
