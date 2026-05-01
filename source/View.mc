@@ -15,6 +15,10 @@ class View extends WatchUi.WatchFace {
         WatchFace.initialize();
     }
 
+    function reloadColors() as Void {
+        _radar.reloadColors();
+    }
+
     function onLayout(dc) {
         setLayout(Rez.Layouts.WatchFace(dc));
     }

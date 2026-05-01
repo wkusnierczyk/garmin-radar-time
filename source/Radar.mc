@@ -9,14 +9,10 @@ import Toybox.Lang;
 
 class Radar {
 
-    private static const 
+    private static const
         RADAR_WIDTH = 100,
         RADAR_GRID_LINES = 10,
-        RADAR_BEAM_SHADES = 40,
-        RADAR_GRID_COLOR = 0x550000,
-        RADAR_BEAM_COLOR = 0x990000;
-        // RADAR_GRID_COLOR = 0x355E3B,
-        // RADAR_BEAM_COLOR = 0x4CBB17;
+        RADAR_BEAM_SHADES = 40;
 
     private static const
         HOURS_SHIP_WIDTH_FACTOR = 0.05,
@@ -27,11 +23,7 @@ class Radar {
         MINUTES_SHIP_RADIUS_FACTOR = 0.6;
 
     private static const
-        SHIP_DIM_COLOR = Graphics.COLOR_DK_GRAY,
-        HOURS_SHIP_LIT_COLOR = 0xFF0000,
-        MINUTES_SHIP_LIT_COLOR = 0xDD0000;
-        // HOURS_SHIP_LIT_COLOR = Graphics.COLOR_GREEN,
-        // MINUTES_SHIP_LIT_COLOR = Graphics.COLOR_GREEN;
+        SHIP_DIM_COLOR = Graphics.COLOR_DK_GRAY;
 
     private static const
         RED_SHIFT = 16,
@@ -51,12 +43,12 @@ class Radar {
         _centerY as Number,
         _radius as Number;
 
-    private var 
+    private var
         _radarWidth = RADAR_WIDTH,
         _radarGridLines = RADAR_GRID_LINES,
         _radarBeamShades = RADAR_BEAM_SHADES,
-        _radarGridColor = RADAR_GRID_COLOR,
-        _radarBeamColor = RADAR_BEAM_COLOR;
+        _radarGridColor = 0,
+        _radarBeamColor = 0;
 
     private var
         _hoursShipWidth as Number,
@@ -74,8 +66,8 @@ class Radar {
 
     private var
         _shipDimColor = SHIP_DIM_COLOR,
-        _hoursShipLitColor = HOURS_SHIP_LIT_COLOR,
-        _minutesShipLitColor = MINUTES_SHIP_LIT_COLOR;
+        _hoursShipLitColor = 0,
+        _minutesShipLitColor = 0;
 
 
     function initialize() {
@@ -92,6 +84,17 @@ class Radar {
         _minutesShipLength = (_radius * _minutesShipLengthFactor).toNumber();
         _minutesShipRadius = (_radius * _minutesShipRadiusFactor).toNumber();
         _time = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+        reloadColors();
+    }
+
+
+    function reloadColors() as Void {
+        var index = PropertyUtils.getPropertyElseDefault(COLOR_SCHEME_PROPERTY, COLOR_SCHEME_DEFAULT);
+        var p = Palette.get(index);
+        _radarGridColor      = p[:grid];
+        _radarBeamColor      = p[:beam];
+        _hoursShipLitColor   = p[:hoursLit];
+        _minutesShipLitColor = p[:minutesLit];
     }
 
 

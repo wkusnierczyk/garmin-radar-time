@@ -2,7 +2,7 @@
 # Path to your Connect IQ SDK 'bin' folder
 # Example (Mac): /Users/username/Library/Application Support/Garmin/ConnectIQ/Sdks/sdks/6.4.0/bin
 # Example (Win): C:/Users/username/AppData/Roaming/Garmin/ConnectIQ/Sdks/sdks/6.4.0/bin
-SDK_BIN ?= /Users/waku/Library/Application_Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.4.0-2025-12-03-5122605dc/bin
+SDK_BIN ?= $(HOME)/Library/Garmin/ConnectIQ/Sdks/connectiq-sdk-default/bin
 
 # Path to your developer key (generated via SDK manager or openssl)
 DEV_KEY ?= ../garmin-keys/developer_key
@@ -11,7 +11,7 @@ DEV_KEY ?= ../garmin-keys/developer_key
 DEVICE ?= fenix7xpronowifi
 
 # Output filename
-OUTPUT := {blank:ucname}Time.prg
+OUTPUT := RadarTime.prg
 # =================================================
 
 # Commands

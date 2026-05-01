@@ -4,4 +4,11 @@
     <string id="AppName">RadarTime</string>
     <string id="Customize">Radar Time</string>
 
+    <string id="ColorMenuTitle">Color</string>
+    <string id="ColorRed">Red</string>
+    <string id="ColorGreen">Green</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorYellow">Yellow</string>
+
 </resources>

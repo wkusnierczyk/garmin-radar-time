@@ -1,3 +1,4 @@
+using Toybox.Application;
 using Toybox.Application.Properties;
 using Toybox.WatchUi;
 
@@ -6,28 +7,21 @@ import Toybox.Lang;
 
 class Menu extends WatchUi.Menu2 {
 
-    // function initialize() {
+    function initialize() {
+        Menu2.initialize({:title => Application.loadResource(Rez.Strings.ColorMenuTitle)});
+        var index = PropertyUtils.getPropertyElseDefault(COLOR_SCHEME_PROPERTY, COLOR_SCHEME_DEFAULT);
+        addItem(new WatchUi.MenuItem(
+            Application.loadResource(Rez.Strings.ColorMenuTitle),
+            nameFor(index),
+            COLOR_SCHEME_PROPERTY,
+            null
+        ));
+    }
 
-        // Menu2.initialize({:title => CUSTOMIZE_MENU_TITLE});
-
-        // var standardTimeEnabled = PropertyUtils.getPropertyElseDefault(STANDARD_TIME_PROPERTY, STANDARD_TIME_MODE_DEFAULT);
-        // addItem(new WatchUi.ToggleMenuItem(
-        //     STANDARD_TIME_LABEL, 
-        //     null, 
-        //     STANDARD_TIME_PROPERTY, 
-        //     standardTimeEnabled, 
-        //     null
-        // ));
-
-        // var multiOptionSelection = PropertyUtils.getPropertyElseDefault(MULTI_OPTION_PROPERTY, MULTI_OPTION_DEFAULT);
-        // var multiOptoinName = MULTI_OPTION_NAMES[multiOptionSelection];
-        // addItem(new WatchUi.MenuItem(
-        //     MULTI_OPTION_LABEL, 
-        //     multiOptoinName, 
-        //     MULTI_OPTION_PROPERTY, 
-        //     null
-        // ));
-
-    // }
+    static function nameFor(index as Number) as String {
+        var ids = [Rez.Strings.ColorRed, Rez.Strings.ColorGreen, Rez.Strings.ColorBlue, Rez.Strings.ColorOrange, Rez.Strings.ColorYellow];
+        var i = (index >= 0 and index < ids.size()) ? index : 0;
+        return Application.loadResource(ids[i]);
+    }
 
 }

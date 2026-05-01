@@ -15,6 +15,7 @@ node_modules/
 package-lock.json
 package.json
 test_build-settings.json
+*-settings.json
 
 # Build artifacts
 *.prg

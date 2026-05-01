@@ -4,6 +4,8 @@ using Toybox.WatchUi;
 
 class RadarApp extends Application.AppBase {
 
+    private var _view as View or Null;
+
     function initialize() {
         AppBase.initialize();
     }
@@ -15,15 +17,17 @@ class RadarApp extends Application.AppBase {
     }
 
     function getInitialView() {
-        return [ new View() ];
+        _view = new View();
+        return [ _view ];
     }
 
-    // function onSettingsChanged() as Void {
-    //     WatchUi.requestUpdate();
-    // }
+    function onSettingsChanged() as Void {
+        if (_view != null) { _view.reloadColors(); }
+        WatchUi.requestUpdate();
+    }
 
-    // function getSettingsView() {
-    //     return [ new Menu(), new Delegate() ];
-    // }
+    function getSettingsView() {
+        return [ new Menu(), new Delegate() ];
+    }
 
 }
