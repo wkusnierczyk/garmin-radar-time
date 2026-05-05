@@ -16,7 +16,7 @@ class Delegate extends WatchUi.Menu2InputDelegate {
             var current = PropertyUtils.getPropertyElseDefault(COLOR_SCHEME_PROPERTY, COLOR_SCHEME_DEFAULT);
             var next = (current + 1) % Palette.size();
             Properties.setValue(COLOR_SCHEME_PROPERTY, next);
-            item.setSubLabel(Menu.nameFor(next));
+            item.setSubLabel(Palette.nameFor(next));
             WatchUi.requestUpdate();
         }
     }
