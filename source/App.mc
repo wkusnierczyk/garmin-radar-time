@@ -21,13 +21,21 @@ class RadarApp extends Application.AppBase {
         return [ _view ];
     }
 
-    function onSettingsChanged() as Void {
-        if (_view != null) { _view.reloadColors(); }
-        WatchUi.requestUpdate();
-    }
-
     function getSettingsView() {
         return [ new Menu(), new Delegate() ];
+    }
+
+    function getWatchFaceDelegate() {
+        return new WatchFaceTapDelegate(_view);
+    }
+
+    function reloadColors() as Void {
+        if (_view != null) { _view.reloadColors(); }
+    }
+
+    function onSettingsChanged() as Void {
+        reloadColors();
+        WatchUi.requestUpdate();
     }
 
 }

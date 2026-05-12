@@ -11,4 +11,7 @@
     <string id="ColorOrange">Orange</string>
     <string id="ColorYellow">Yellow</string>
 
+    <string id="TapToCycleMenuTitle">Tap to cycle</string>
+    <string id="TapToCycleNote">Tap the watch face to cycle through colors without opening settings. Disable this once you've picked your favorite color to prevent accidental changes. Requires Connect IQ 4 or later — older devices will accept the setting but won't react to taps on the watch face.</string>
+
 </resources>
