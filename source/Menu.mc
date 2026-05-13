@@ -17,15 +17,6 @@ class Menu extends WatchUi.Menu2 {
             COLOR_SCHEME_PROPERTY,
             null
         ));
-
-        var tapEnabled = PropertyUtils.getPropertyElseDefault(TAP_TO_CYCLE_PROPERTY, TAP_TO_CYCLE_DEFAULT);
-        addItem(new WatchUi.ToggleMenuItem(
-            Application.loadResource(Rez.Strings.TapToCycleMenuTitle),
-            null,
-            TAP_TO_CYCLE_PROPERTY,
-            tapEnabled,
-            null
-        ));
     }
 
 }

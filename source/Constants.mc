@@ -25,6 +25,3 @@ const SCREEN_IS_MIP = !SCREEN_IS_AMOLED;
 
 const COLOR_SCHEME_PROPERTY = "ColorScheme";
 const COLOR_SCHEME_DEFAULT  = 0;
-
-const TAP_TO_CYCLE_PROPERTY = "TapToCycle";
-const TAP_TO_CYCLE_DEFAULT  = false;

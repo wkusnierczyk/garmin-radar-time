@@ -25,10 +25,6 @@ class RadarApp extends Application.AppBase {
         return [ new Menu(), new Delegate() ];
     }
 
-    function getWatchFaceDelegate() {
-        return new WatchFaceTapDelegate(_view);
-    }
-
     function reloadColors() as Void {
         if (_view != null) { _view.reloadColors(); }
     }

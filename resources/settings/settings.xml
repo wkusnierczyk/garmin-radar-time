@@ -10,8 +10,5 @@
         </settingConfig>
     </setting>
 
-    <setting propertyKey="@Properties.TapToCycle" title="@Strings.TapToCycleMenuTitle" prompt="@Strings.TapToCycleNote">
-        <settingConfig type="boolean" />
-    </setting>
 
 </settings>
