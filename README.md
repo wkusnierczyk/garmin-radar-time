@@ -19,6 +19,7 @@ Available from [Garmin Connect IQ Developer portal](https://apps.garmin.com/apps
 
 * [Radar time](#radar-time)
 * [Features](#features)
+* [Settings](#settings)
 * [Fonts](#fonts)
 * [Build, test, deploy](#build-test-deploy)
 
@@ -35,8 +36,28 @@ The Radar Time watch face supports the following features:
 |-|:-|
 |![](resources/graphics/RadarTime3_resized.png)|**Radar screen**<br/> Hour and minutes displayed as dim ships, seconds as a rotating radar beam.|
 |![](resources/graphics/RadarTime4_resized.png)|**Lighted ships**<br/> When within the radar beam, ships light up in a bright color.|
-|![](resources/graphics/RadarTime1_resized.png)|**Color themes**<br/> Ship, radar beam and grid colors can be changed in a customisation menu setting.</br/>_Not available in the current version_.|
+|![](resources/graphics/RadarTime1_resized.png)|**Color schemes**<br/> Five preset color schemes — red (default), green, blue, orange, yellow — applied uniformly to the radar grid, beam, and lit ships. Change from the watch face Customize menu (with live preview) or from the Garmin Connect mobile app. See [Settings](#settings).|
 |![](resources/graphics/RadarTime7_resized.png)|**MIP screens**<br/> MIP screens handle only 64 colors, which makes displaying a smooth radar beam a challenge. Instead, on MIP screens the beam is drawn by varying the number of waves depending on the angular distance from the leading beam edge.|
+
+## Settings
+
+Radar Time ships with five color schemes — **red** (default), **green**, **blue**, **orange**, and **yellow**. The selection applies uniformly to the radar grid, the beam, and the lit ships. Your choice persists across watch reboots.
+
+There are two ways to change the color:
+
+### On the watch
+
+1. Long-press the watch face to open the system Customize menu.
+2. Select **Color**. A live preview opens — the radar renders in the currently selected scheme with the scheme name shown at the bottom.
+3. Tap the screen or press the select button to cycle through the five schemes. The radar redraws on each tap so you can see how each color looks.
+4. Press **Back** to exit. The last cycled scheme is the one that stays.
+
+### From the Garmin Connect mobile app
+
+1. Open Garmin Connect on your phone.
+2. Navigate to your watch → **Watch Faces** → **Radar Time** → **Settings**.
+3. Pick a color from the **Color** dropdown.
+4. Tap **Save** to push the change to your watch over Bluetooth.
 
 ## Fonts
 
