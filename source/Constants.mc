@@ -21,3 +21,7 @@ const SCREEN_IS_MIP = !SCREEN_IS_AMOLED;
 // const MULTI_OPTION_PROPERTY = "MultiOption";
 // const MULTI_OPTION_DEFAULT = 1;
 // const MULTI_OPTION_NAMES = Application.loadResource(Rez.JsonData.MultiOptionValues) as Array<String>;
+
+
+const COLOR_SCHEME_PROPERTY = "ColorScheme";
+const COLOR_SCHEME_DEFAULT  = 0;
